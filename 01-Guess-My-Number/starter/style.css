@@ -13,7 +13,7 @@ html {
 
 body {
   font-family: 'Press Start 2P', sans-serif;
-  color: #eee;
+  color: #12cf25;
   background-color: #222;
   /* background-color: #60b347; */
 }
@@ -22,7 +22,7 @@ body {
 header {
   position: relative;
   height: 35vh;
-  border-bottom: 7px solid #eee;
+  border-bottom: 7px solid;
 }
 
 main {
@@ -97,8 +97,8 @@ h1 {
 
 .btn {
   border: none;
-  background-color: #eee;
-  color: #222;
+  background-color: #12cf25;
+  color: #FFFFFF;
   font-size: 2rem;
   font-family: inherit;
   padding: 2rem 3rem;
