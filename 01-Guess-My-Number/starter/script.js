@@ -14,14 +14,13 @@ const bodyElement = document.querySelector('body');
 const highscoreElement = document.querySelector('.highscore');
 const btnElement = document.querySelector('.btn')
 
-const messageError = function(message){
+const messageError = function (message) {
     messageElement.textContent = message;
 };
 
 // Iniciar juego imput y check
 document.querySelector('.check').addEventListener('click', function () {
     const guess = Number(guessInput.value);
-    console.log(guess, typeof guess);
 
     // Verificar si el número está dentro del rango permitido
     if (guess <= 0 || guess > 30) {
@@ -53,7 +52,7 @@ document.querySelector('.check').addEventListener('click', function () {
 
         // Verificar si el puntaje es menor a 1 para finalizar el juego
         if (score < 1) {
-            messageError ('🤯 Game Over 🤦‍♂️');
+            messageError('🤯 Game Over 🤦‍♂️');
             scoreElement.textContent = 0;
             bodyElement.style.backgroundColor = '#b34747';
             numberElement.style.width = '30rem';

@@ -5,21 +5,20 @@ const overlay = document.querySelector('.overlay');
 const btnCloseStory = document.querySelector('.close-story');
 const btnShowStory = document.querySelectorAll('.show-story')
 
-console.log(btnShowStory);
 
-const closeStory = function(){
-    story.classList.add('hidden');
-    overlay.classList.add('hidden')
-}
+const toggleVisibility = function (show) {
+    story.classList.toggle('hidden', !show);
+    overlay.classList.toggle('hidden', !show);
+};
 
-const openStory = function(){
-    story.classList.remove('hidden');
-    overlay.classList.remove('hidden')
-}
+const openStory = () => toggleVisibility(true);
+const closeStory = () => toggleVisibility(false);
 
-for (let i = 0; i < btnShowStory.length; i++) {
-    btnShowStory[i].addEventListener('click',openStory);
-}
+document.body.addEventListener('click', function (e) {
+    if (e.target.classList.contains('show-story')) {
+        openStory();
+    }
+});
 
 btnCloseStory.addEventListener('click', closeStory);
 overlay.addEventListener('click', closeStory);
